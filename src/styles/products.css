@@ -1,0 +1,11 @@
+/* src/styles/products.css */
+
+.products-page {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.products-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}

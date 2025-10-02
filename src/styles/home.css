@@ -1,0 +1,76 @@
+/* src/styles/home.css */
+
+.hero {
+  position: relative;
+  background: url("https://picsum.photos/1200/400?blur=2") center/cover
+    no-repeat;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* smooth transition effect */
+  transition: all 0.4s ease-in-out;
+}
+
+/* طبقة غامقة فوق الصورة - أخف شوية */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* أخف عشان الكلام يبقى واضح */
+  z-index: 1;
+  transition: background 0.4s ease-in-out;
+}
+
+/* لما تعدي الماوس على الهيرو يزيد الغمقان شوية */
+.hero:hover::after {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hero:hover h1 {
+  transform: translateY(-5px);
+}
+
+.hero:hover p {
+  opacity: 0.9;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Products Section */
+.products-section {
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: -20px; /* قريب من الهيرو */
+  transition: all 0.3s ease-in-out;
+}
+
+.products-section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: wheat;
+}

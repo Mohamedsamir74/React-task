@@ -1,0 +1,123 @@
+/* ====== الهيدر الأساسي ====== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b0c10;
+  padding: 14px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo */
+.logo a {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #66fcf1;
+  letter-spacing: 1px;
+}
+
+/* زر القائمة (الموبايل) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link.active {
+  color: #0097a7;
+  border-bottom: 2px solid #0097a7;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #1f2833;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  padding: 5px 8px;
+  width: 140px;
+  font-size: 0.9rem;
+}
+
+.search-box input::placeholder {
+  color: #bbb;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: #66fcf1;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.search-btn:hover {
+  color: #45a29e;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    background: #1f2833;
+    padding: 20px;
+    display: none;
+    width: 220px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .search-box {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+}
