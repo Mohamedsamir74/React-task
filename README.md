@@ -24,11 +24,3 @@ This is a React project created as part of the assigned task. It includes a Home
 - GitHub Pages (for deployment)
 
 ---
-
-**Installation**
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/USERNAME/my-react-task.git
-```
