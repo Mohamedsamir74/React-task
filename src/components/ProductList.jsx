@@ -1,4 +1,3 @@
-// src/components/ProductList.jsx
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import "../styles/productList.css";
@@ -12,7 +11,6 @@ export default function ProductList({ limit, searchQuery }) {
       .then((data) => setProducts(limit ? data.slice(0, limit) : data));
   }, [limit]);
 
-  // فلترة المنتجات حسب البحث
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchQuery.toLowerCase())
   );

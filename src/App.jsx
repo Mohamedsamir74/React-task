@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
@@ -8,7 +7,7 @@ import ProductDetails from "./components/ProductDetails";
 import About from "./pages/About";
 
 export default function App() {
-  const [searchQuery, setSearchQuery] = useState(""); // حالة البحث
+  const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <>

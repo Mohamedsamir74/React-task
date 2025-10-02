@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import ProductList from "../components/ProductList";
 import "../styles/home.css";
 

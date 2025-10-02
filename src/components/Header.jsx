@@ -11,7 +11,6 @@ export default function Header({ searchQuery, setSearchQuery }) {
         <NavLink to="/">MyStore</NavLink>
       </div>
 
-      {/* زر القائمة للموبايل */}
       <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
         ☰
       </button>
@@ -45,7 +44,6 @@ export default function Header({ searchQuery, setSearchQuery }) {
           About
         </NavLink>
 
-        {/* بوكس البحث */}
         <div className="search-box">
           <input
             type="text"
