@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
@@ -21,6 +21,8 @@ export default function App() {
           />
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/about" element={<About />} />
+
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
     </>
